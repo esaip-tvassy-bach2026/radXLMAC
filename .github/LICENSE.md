@@ -1,6 +1,6 @@
 # Licensing information
 ## Contributors
-This program is made by Thomas VASSY--ROUSSEAU, intern at TIMCOD OUEST in May 2025.<br />More informations about him at `https://github.com/esaip-tvassy-bach2026`.
+This program was made by Thomas VASSY--ROUSSEAU, intern at TIMCOD OUEST in May 2025.<br />More informations about him at `https://github.com/esaip-tvassy-bach2026`.
 ## Copyrights
 Copyright (C) TIMCOD SAS, 2025-2030. All rights reserved.<br />Copyright (C) TIMCOD OUEST SAS, 2025-2030. All rights reserved.
 ## Redistribution
