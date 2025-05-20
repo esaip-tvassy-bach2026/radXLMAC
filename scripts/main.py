@@ -39,7 +39,7 @@ def menu_principal(confirm):
     assert isinstance(confirm,str), "Vous avez dû faire une erreur de saisie dans le programe. Le programme s-arrête ici."
     assert confirm=="O", "Erreur. Vous avez demandé l-arrêt du programme, donc le programme s-arrête."
     print("\nIMPORTANT : VOUS ALLEZ SAISIR DES INFORMATIONS QUE VOUS NE POURREZ PAS MODIFIER PAR LA SUITE.")
-    print(f"\nMerci d-indiquer le nom exact du fichier, y compris son extansion. Par exemple : {exemple_de_nom_de_fichier}.")
+    print(f"\nMerci d-indiquer le nom exact du fichier, y compris son extension. Par exemple : {exemple_de_nom_de_fichier}.")
     nom_du_fichier=str(input("Quel est le nom du fichier XLSX que je dois utiliser pour calculer et rentrer les adresses MAC ? "))
     print("\n")
     nom_de_la_feuille=str(input("Quel est le nom exact de la feuille à modifier dans votre fichier Excel ? "))
