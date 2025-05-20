@@ -1,7 +1,7 @@
 """
 Ce fichier contient le code principal du programme. Il permet de lancer le menu principal.
 """
-# from programe.py import lancement_programme
+from program import lancement_programme
 programe_nom_fichier_principal="__main__"
 exemple_de_nom_de_fichier="ma_superbe_archive.xlsx"
 exemple_nom_colonne="Adresse MAC Radio"
@@ -55,7 +55,7 @@ def menu_principal(confirm):
     while confirmation_formattage!="O" and confirmation_formattage!="N":
         print("Vous avez dû faire une erreur de saisie. Recommencez.")
         confirmation_formattage=str(input("Tapez O si vous souhaitez que les adresses MAC soit formattées en majuscules et avec des deux-points (:) ou N si vous ne le souhaitez pas ") or "N")
-    # lancement_programme(confirmation_formattage,nom_du_fichier,nom_de_la_feuille,nom_colonne_MAC_B,nombre_radios,nom_colonne_MAC_RAD)
+    lancement_programme(confirmation_formattage,nom_du_fichier,nom_de_la_feuille,nom_colonne_MAC_B,nombre_radios,nom_colonne_MAC_RAD)
 
 # Vérification du nom du fichier et lancement.
 if __name__==programe_nom_fichier_principal:
