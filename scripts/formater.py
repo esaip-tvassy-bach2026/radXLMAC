@@ -16,3 +16,13 @@ def mise_au_format(MAC):
     if len(adresse_standard)!=12:
         print("\nERREUR FATALE : Une des adresses MAC de votre tableau, dans votre fichier Excel, n-est pas de 12 caractères. Corrigez votre saisie et redémarrez le programme. Le programme doit s-arrêter ici.")
         quit()
+    # On met l'adresse MAC en majuscules.
+    adresse_majuscules=adresse_standard.upper()
+    print(f"Log : Voici l-adresse MAC en majuscules : {adresse_majuscules}.")
+    # On met les deux-points entre les caractères.
+    adresse_au_format=":".join([adresse_majuscules[i:i+2] for i in range(0,12,2)])
+    print(f"Log : Voici l-adresse MAC finale formatée : {adresse_au_format}.")
+    return adresse_au_format
+
+print("\nERREUR FATALE : Vous ne pouvez pas exécuter ce script seul en mode standalone. Veuillez lancer le programme principal en lançant le fichier main.py. Le prgramme doit s-arrêter ici.")
+quit()
