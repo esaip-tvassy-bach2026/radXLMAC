@@ -33,6 +33,18 @@ def charger_colonnes(fichierc,ligne_depart=2,nb_radios,col_phys,col1,col2,col3=N
 	# Enfin, on remplit les variables avec les bonnes valeurs et on retourne un beau tuple.
 	colonne_phys=dico_colonnes[col_phys]
 	colonne1=dico_colonnes[col1]
+	colonne2=dico_colonnes[col2]
+	super_tuple=(colonne1,colonne2)
+	if col3!=None:
+		colonne3=dico_colonnes[col3]
+		super_tuple=(colonne1,colonne2,colonne3)
+	elif col4!=None:
+		colonne4=dico_colonnes[col4]
+		super_tuple=(colonne1,colonne2)
+	elif col5!=None:
+		colonne5=dico_colonnes[col5]
+	elif col6!=None:
+		colonne6=dico_colonnes[col6]
 
 print("\nERREUR FATALE : Cette fonction ne peut pas être utilisée en mode standalone.")
 print("Veuillez lancer le programme complet à partir du fichier main.py.")
