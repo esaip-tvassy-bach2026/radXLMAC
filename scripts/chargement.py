@@ -29,22 +29,26 @@ def charger_colonnes(fichierc,ligne_depart=2,nb_radios,col_phys,col1,col2,col3=N
 	# On charge le contenu de la feuille à modifier dans des variables.
 	contenu_feuille=fichierc[1]
 	# Ensuite, on créé un dictionnaire. Pour chaque nom de colonne, on lui associe un index qui correspond au nom de colonne Excel (A,B,C,D, etc.). Ainsi, Python peut savoir avec précision quelle colonne se situe où dans la feuille.
-	dico_colonnes={cellule.valeur:numero for numero,cellule in enumerate(contenu_feuille[ligne_depart])}
+	dico_colonnes={cellule.value:numero for numero,cellule in enumerate(contenu_feuille[ligne_depart])}
 	# Enfin, on remplit les variables avec les bonnes valeurs et on retourne un beau tuple.
-	colonne_phys=dico_colonnes[col_phys]
+	colonne_mac_phys=dico_colonnes[col_phys]
 	colonne1=dico_colonnes[col1]
 	colonne2=dico_colonnes[col2]
-	super_tuple=(colonne1,colonne2)
-	if col3!=None:
+	tableau_final=[colonne_mac_phys,colonne1,colonne2]
+	if type(col3)==str:
 		colonne3=dico_colonnes[col3]
-		super_tuple=(colonne1,colonne2,colonne3)
-	elif col4!=None:
+		tableau_final.append(colonne3)
+	elif type(col4)==str:
 		colonne4=dico_colonnes[col4]
-		super_tuple=(colonne1,colonne2)
-	elif col5!=None:
+		tableau_final.append(colonne4)
+	elif type(col5)==str:
 		colonne5=dico_colonnes[col5]
-	elif col6!=None:
+		tableau_final.append(colonne5)
+	elif type(col6)==str:
 		colonne6=dico_colonnes[col6]
+		tableau_final.append(colonne6)
+	super_tuple=tuple(tableau_final)
+	return super_tuple
 
 print("\nERREUR FATALE : Cette fonction ne peut pas être utilisée en mode standalone.")
 print("Veuillez lancer le programme complet à partir du fichier main.py.")
