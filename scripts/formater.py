@@ -23,6 +23,3 @@ def mise_au_format(MAC):
     adresse_au_format=":".join([adresse_majuscules[i:i+2] for i in range(0,12,2)])
     print(f"Log : Voici l-adresse MAC finale formatée : {adresse_au_format}.")
     return adresse_au_format
-
-print("\nERREUR FATALE : Vous ne pouvez pas exécuter ce script seul en mode standalone. Veuillez lancer le programme principal en lançant le fichier main.py. Le prgramme doit s-arrêter ici.")
-quit()
