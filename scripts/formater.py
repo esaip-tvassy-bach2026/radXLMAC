@@ -1,17 +1,17 @@
 """
-Ce fichier contient la fonction de formatage.
+Ce fichier contient les fonctions de formatage.
 """
 
-def mise_au_format(MAC):
+def mise_au_format(adresse):
     """
     Cette fonction met une adresse MAC au format standard, à savoir tout en majuscules et avec des deux-points (:) de séparation.
-    Entrée : MAC(str)
+    Entrée : adresse(str)
     Sortie : Retourne l'adresse MAC dans le bon format.
     """
-    assert isinstance(MAC,str), "ERREUR FATALE : L-adresse MAC renseignée n-est pas dans le bon format. Relancez complètement le programme et corrigez votre saisie. Le programme doit s-arrêter ici."
+    assert isinstance(adresse,str), "ERREUR FATALE : L-adresse MAC renseignée n-est pas dans le bon format. Relancez complètement le programme et corrigez votre saisie. Le programme doit s-arrêter ici."
     # Suppression des caractères déjà présents, le cas échéant.
     # On enregistre ça dans une variable.
-    adresse_standard=MAC.replace(":","").replace("-","").replace(".","").replace("_","")
+    adresse_standard=adresse.replace(":","").replace("-","").replace(".","").replace("_","")
     # Vérification du nombre de caractères à nu pour les erreurs de saisie.
     if len(adresse_standard)!=12:
         print("\nERREUR FATALE : Une des adresses MAC de votre tableau, dans votre fichier Excel, n-est pas de 12 caractères. Corrigez votre saisie et redémarrez le programme. Le programme doit s-arrêter ici.")
@@ -23,3 +23,5 @@ def mise_au_format(MAC):
     adresse_au_format=":".join([adresse_majuscules[i:i+2] for i in range(0,12,2)])
     print(f"Log : Voici l-adresse MAC finale formatée : {adresse_au_format}.")
     return adresse_au_format
+
+def additionner_MAC()
