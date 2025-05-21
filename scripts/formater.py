@@ -24,4 +24,14 @@ def mise_au_format(adresse):
     print(f"Log : Voici l-adresse MAC finale formatée : {adresse_au_format}.")
     return adresse_au_format
 
-def additionner_MAC()
+def additionner_MAC(adresse_MAC,nbr_addition):
+    """
+    Cette fonction permet de faire une additon sur une adresse MAC.
+    Par exemple : mon_adresse_MAC+55.
+    Entrée : adresse_MAC(str), nbr_addition(int)
+    Sortie : adr_additionnee(str)
+    """
+    assert isinstance(adresse_MAC,str) and isinstance(nbr_addition,int), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrectes. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+    calcul=int(adresse_MAC,16)+nbr_addition
+    adr_additionnee=str(calcul:012X)
+    return adr_additionnee
