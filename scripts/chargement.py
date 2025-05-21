@@ -7,12 +7,14 @@ def charger(fichier,feuille):
 	"""
 	Cette fonction permet de charger une feuille particulière dans un fichier XLSX.
 	Entrée : fichier(str), feuille(str)
-	Sortie : workbook (contient tous les éléments du classeur XLSX), worksheet (contient tous les éléments de la feuille de travail)
+	Sortie : tuple_final(tpl)
 	"""
 	assert isinstance(fichier,str) and isinstance(feuille,str), "ERREUR FATALE : Il semble que votre nom de fichier ou de feuille ne soit pas dans le bon format. Veuillez redémarrer le programme complètement afin de corriger votre saisie. Le programme doit s-arrêter ici."
 	assert "xlsx" in fichier, "ERREUR FATALE : Il semble que vous essayer d-utiliser ce programme avec un fichier qui n-est pas XLSX. Ce programme est incompatible avec des fichiers qui ne sont pas au format XLSX. Veuillez redémarrer complètement le programme afin de corriger votre saisie. Le programme doit s-arrêter ici."
 	classeur=load_workbook(fichier)
 	feuille=classeur[feuille]
+	tuple_final=(classeur,feuille)
+	return tuple_final
 
 def charger_colonnes(nb_col,col1,col2,col3=None,col4=None,col5=None,col6=None):
 	"""
