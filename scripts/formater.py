@@ -24,6 +24,21 @@ def mise_au_format(adresse):
     print(f"Log : Voici l-adresse MAC finale formatée : {adresse_au_format}.")
     return adresse_au_format
 
+def recuperation_increments(nombre_de_radios):
+    """
+    Cette fonction centrale permet de définir les incrémentations nécessaires pour faire marcher les autres fonctions.
+    Entrée : nombre_de_radios(int)
+    Sortie : liste_incrementations(lst)
+    """
+    assert isinstance(nombre_de_radios,int), "ERREUR FATALE : L-argument passé en paramètre de cette fonction est incorrect ou n-est pas dans le bon format. Veuillez redémarrer le programme complètement et corriger votre saisie. Le programme doit s-arrêter ici."
+    assert nombre_de_radios<=6, "ERREUR FATALE : Ce programme ne peut pas supporter plus de 6 adresses MAC radio en même temps. Veuillez redémarrer le programme complètement et corriger votre saisie. Le programme doit s-arrêter ici."
+    incrementations_possibles=[0x10,0x14,0x20,0x24,0x30,0x34]
+    liste_incrementations=[]
+    for i in range(nombre_de_radios):
+        if i<len(incrementations_possibles):
+            liste_incrementations.append(incrementations_possibles[i])
+    return liste_incrementations
+
 def additionner_MAC(adresse_MAC,nbr_addition):
     """
     Cette fonction permet de faire une additon sur une adresse MAC.
