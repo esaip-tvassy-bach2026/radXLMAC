@@ -3,7 +3,7 @@ Ce fichier contient toutes les fonctions qui permettent la modification et la sa
 """
 from copier import copie
 from chargement import charger, charger_colonnes
-from formater import mise_au_format, additionner_MAC
+from formater import mise_au_format, additionner_MAC, recuperation_increments
 
 def remplir_colonnes(fichier_charge,colonnes,nb_radios,ligne_base=2,formater):
 	"""
@@ -18,6 +18,7 @@ def remplir_colonnes(fichier_charge,colonnes,nb_radios,ligne_base=2,formater):
 	feuille=fichier_charge[1]
 	col_mac_physique=colonnes[0]
 	col_radio=[]
+	les_increments=recuperation_increments(nb_radios)
 	for i in range(1, nb_radios+1):
 		if i<len(colonnes):
 			col_radio.append(colonnes[i])
@@ -34,12 +35,13 @@ def remplir_colonnes(fichier_charge,colonnes,nb_radios,ligne_base=2,formater):
 			mac_base=mac_physique_formatee.replace(":","")
 			# Remplissage des adresses radios.
 			for idx_radio,col_idx in enumerate(col_radio):
-				mac_radio=additionner_MAC(mac_base,idx_radio+1)
-				mac_radio_formatee=mise_au_format(mac_radio)
-				if formater==True:
-					rangee[col_idx-1].value=mac_radio_formatee
-				else:
-					rangee[col_idx-1].value=mac_radio
+				if idx_radio<len(les_increments):
+					mac_radio=additionner_MAC(mac_base,les_increments[idx_radio])
+					mac_radio_formatee=mise_au_format(mac_radio)
+					if formater==True:
+						rangee[col_idx-1].value=mac_radio_formatee
+					else:
+						rangee[col_idx-1].value=mac_radio
 
 def sauvegarde_finale(classeur_modifie,nom_fichier):
 	"""
