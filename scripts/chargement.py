@@ -26,6 +26,7 @@ def charger_colonnes(fichierc,ligne_depart=2,nb_radios,col_phys,col1,col2,col3=N
 	"""
 	assert isinstance(fichierc,tpl) and isinstance(ligne_depart,int) and isinstance(nb_radios,int) and isinstance(col_phys,str) and isinstance(col1,str) and isinstance(col2,str) and (isinstance(col3,str) or col3==None) and (isinstance(col4,str) or col4==None) and (isinstance(col5,str) or col5==None) and (isinstance(col6,str) or col6==None), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction ne sont pas dans le bon format. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
 	assert nb_radios<=6, "ERREUR FATALE : Cette fonction ne peut prendre en charge un appareil qui a plus de 6 antennes radio. Veuillez redémarrer le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+	assert ligne_depart>0, "ERREUR FATALE : La ligne où se situe vos entêtes de colonnes ne peut pas être inférieure ou égale à zéro. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
 	# On charge le contenu de la feuille à modifier dans des variables.
 	contenu_feuille=fichierc[1]
 	# Ensuite, on créé un dictionnaire. Pour chaque nom de colonne, on lui associe un index qui correspond au nom de colonne Excel (A,B,C,D, etc.). Ainsi, Python peut savoir avec précision quelle colonne se situe où dans la feuille.
