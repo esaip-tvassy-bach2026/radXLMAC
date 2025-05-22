@@ -40,3 +40,20 @@ def remplir_colonnes(fichier_charge,colonnes,nb_radios,ligne_base=2,formater):
 					rangee[col_idx-1].value=mac_radio_formatee
 				else:
 					rangee[col_idx-1].value=mac_radio
+
+def sauvegarde_finale(classeur_modifie,nom_fichier):
+	"""
+	Cette fonction permet d-enregistrer le fichier modifié une fois que toutes les opérations ont étés réalisées dessus.
+	Entrée : classeur_modifie(tpl), nom_fichier(str)
+	Sortie : message_reussite(str)
+	"""
+	assert isinstance(classeur_modifie,tuple) and isinstance(nom_fichier,str), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrects ou ne sont pas dans le bon format. Veuillez redémarrer compètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+	assert "xlsx" in nom_fichier, "ERREUR FATALE : Votre nom de fichier de destination ne contient pas l-extension de fichier .xlsx, ce qui est obligatoire. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+	classeur_modifie.save(nom_fichier)
+	message_reussite="LOG: MSG: Fonction sauvegarde_finale: Le fichier final a bien été sauvegardé dans son nouvel emplacement."
+	return message_reussite
+
+print("ERREUR FATALE : Vous ne pouvez pas exécuter cette fonction en mode standalone.")
+print("Veuillez lancer le programme principal en exécutant le fichier main.py.")
+print("Le programme doit s-arrêter ici.")
+quit()
