@@ -32,6 +32,8 @@ def additionner_MAC(adresse_MAC,nbr_addition):
     Sortie : adr_additionnee(str)
     """
     assert isinstance(adresse_MAC,str) and isinstance(nbr_addition,int), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrectes. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+    assert nbr_addition>0, "ERREUR FATALE : Votre addition ne peut pas être inférieure ou égale à zéro. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+    assert nbr_addition
     calcul=int(adresse_MAC,16)+nbr_addition
     adr_additionnee=f"{calcul:012X}"
     return adr_additionnee
