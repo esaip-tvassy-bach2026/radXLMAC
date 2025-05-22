@@ -39,17 +39,15 @@ def recuperation_increments(nombre_de_radios):
             liste_incrementations.append(incrementations_possibles[i])
     return liste_incrementations
 
-def additionner_MAC(adresse_MAC,nbr_addition):
+def additionner_MAC(adresse_MAC,increment):
     """
-    Cette fonction permet de faire une additon sur une adresse MAC.
-    Par exemple : mon_adresse_MAC+55.
-    Entrée : adresse_MAC(str), nbr_addition(int)
+    Cette fonction permet de faire une additon sur une adresse MAC, via les incréments de la fonction centrale.
+    Par exemple : mon_adresse_MAC+{0x10}.
+    Entrée : adresse_MAC(str), increment(lst)
     Sortie : adr_additionnee(str)
     """
-    assert isinstance(adresse_MAC,str) and isinstance(nbr_addition,int), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrectes. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
-    assert nbr_addition>0, "ERREUR FATALE : Votre addition ne peut pas être inférieure ou égale à zéro. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
-    assert nbr_addition
-    calcul=int(adresse_MAC,16)+nbr_addition
+    assert isinstance(adresse_MAC,str) and isinstance(increment,list), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrects. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+    calcul=int(adresse_MAC,16)+increment
     adr_additionnee=f"{calcul:012X}"
     return adr_additionnee
 
