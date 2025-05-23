@@ -18,4 +18,6 @@ def cerveau_principal(former,nom_fichier_init,nom_feuille_init,nom_col_mac_B,nbr
 	assert nbr_rad<=6, "ERREUR FATALE : Ce programme ne peut pas calculer les adresses MAC de plus de 6 antennes radios en même temps. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
 	assert ligne_base>0, "ERREUR FATALE : Le numéro de la ligne où se situe vos entêtes de colonnes ne peut pas être inférieure ou égale à zéro. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
 	# En premier, on copie le fichier d-origine.
-	copie(nom_fichier_init,"votre_nouvelle_archive_modifiee.xlsx")
+	copie(nom_fichier_init,"ma_superbe_archive_modifiee.xlsx")
+	# Ensuite, on charge le fichier demandé.
+	fichier=charger(nom_fichier_init,nom_feuille_init)
