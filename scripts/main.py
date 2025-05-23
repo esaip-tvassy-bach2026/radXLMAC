@@ -1,7 +1,7 @@
 """
 Ce fichier contient le code principal du programme. Il permet de lancer le menu principal.
 """
-from program import lancement_programme
+from program import cerveau_principal
 programe_nom_fichier_principal="__main__"
 exemple_de_nom_de_fichier="ma_superbe_archive.xlsx"
 exemple_nom_colonne="Adresse MAC Radio"
@@ -44,6 +44,7 @@ def menu_principal(confirm):
     print("\n")
     nom_de_la_feuille=str(input("Quel est le nom exact de la feuille à modifier dans votre fichier Excel ? "))
     print("\n")
+    entetes=int(input("Quel est le numéro de la ligne Excel où se situe vos noms de colonnes ? (nombre entier). "))
     nom_colonne_MAC_B=str(input("Quel est le nom exact de la colonne du tableau où sont écrites les adresses MAC physiques des points d-accès Wi-Fi ? "))
     print("\nNOTE : Ce programme ne peut pas traiter un point d-accès qui a plus de 6 antennes radio.")
     nombre_radios=int(input("Combien d-antennes radios a votre point d-accès Wi-Fi ? Veuillez entrer un nombre entier. "))
@@ -55,7 +56,11 @@ def menu_principal(confirm):
     while confirmation_formattage!="O" and confirmation_formattage!="N":
         print("Vous avez dû faire une erreur de saisie. Recommencez.")
         confirmation_formattage=str(input("Tapez O si vous souhaitez que les adresses MAC soit formattées en majuscules et avec des deux-points (:) ou N si vous ne le souhaitez pas ") or "N")
-    lancement_programme(confirmation_formattage,nom_du_fichier,nom_de_la_feuille,nom_colonne_MAC_B,nombre_radios,nom_colonne_MAC_RAD)
+    if confirmation_formattage=="O":
+        confirmation_formattage=True
+    elif confirmation_formattage=="N":
+        confirmation_formattage=False
+    cerveau_principal(confirmation_formattage,nom_du_fichier,nom_de_la_feuille,nom_colonne_MAC_B,nombre_radios,nom_colonne_MAC_RAD,entetes)
 
 # Vérification du nom du fichier et lancement.
 if __name__==programe_nom_fichier_principal:
