@@ -43,15 +43,10 @@ def additionner_MAC(adresse_MAC,increment):
     """
     Cette fonction permet de faire une additon sur une adresse MAC, via les incréments de la fonction centrale.
     Par exemple : mon_adresse_MAC+{0x10}.
-    Entrée : adresse_MAC(str), increment(lst)
+    Entrée : adresse_MAC(str), increment(int)
     Sortie : adr_additionnee(str)
     """
-    assert isinstance(adresse_MAC,str) and isinstance(increment,list), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrects. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
+    assert isinstance(adresse_MAC,str) and isinstance(increment,int), "ERREUR FATALE : Les informations entrées en paramètres de cette fonction sont incorrects. Veuillez redémarrer complètement le programme et corriger votre saisie. Le programme doit s-arrêter ici."
     calcul=int(adresse_MAC,16)+increment
     adr_additionnee=f"{calcul:012X}"
     return adr_additionnee
-
-print("\nERREUR FATALE : Vous ne pouvez pas exécuter cette fonction en mode standalone.")
-print("Veuillez lancer le programme complet en exécutant le fichier main.py.")
-print("Le programme doit s-arrêter ici.")
-quit()
