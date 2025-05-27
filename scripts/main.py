@@ -14,8 +14,6 @@ def program_launch():
     print("This program was made by Thomas VASSY--ROUSSEAU, intern at TIMCOD OUEST in May 2025. More informations about him at https://github.com/esaip-tvassy-bach2026.")
     print("Copyright (C) TIMCOD SAS, 2025-2030. All rights reserved.")
     print("Copyright (C) TIMCOD OUEST SAS, 2025-2030. All rights reserved.")
-    print("Chargement terminé avec succès.")
-    print("\nNOTE : Ce programme sert à calculer les adresses MAC radio des points d-accès Wi-Fi de la gamme Extreme Networks, modèle AP3000 uniquement.")
     print("\nINFORMATIONS IMPORTANTES")
     print(" + Votre fichier doit être obligatoirement au format XSLX pour pouvoir être traité. Ce programme ne fonctionne pas avec d-autres formats.")
     print(" + Ne pas mettre de chemins d-accès en réponse aux questions qui vous seront demandées.")
@@ -24,6 +22,7 @@ def program_launch():
     print(" + Pensez à enregistrer votre travail et à fermer Excel avant de lancer ce programme. Il est possible qu-Excel plante ou que vous ayez des messages d-erreur si vous exécutez les deux programmes en même temps.")
     print(" + Le fichier XLSX doit impérativement être nommé avec des underscores (_) pour les espaces et avec des lettres minuscules. Python déteste les accents, les espaces et les caractères spéciaux (sauf _) dans les noms de fichiers.")
     print(f" + Exemple de nom de fichier correct : {exemple_de_nom_de_fichier}.")
+    print("\nLOG: INFO: Le chargement du programme s-est terminé avec succès.")
     confirmation_de_lancement=str(input("Tapez O si vous êtes prêt à continuer. Dans le cas contraire, tapez N. "))
     while confirmation_de_lancement!="O" and confirmation_de_lancement!="N":
         print("Vous avez fait une erreur de saisie. Veuillez réessayer (faites attention aux majuscules, le système est sensible à la casse).")
