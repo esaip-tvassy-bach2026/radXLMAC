@@ -1,5 +1,8 @@
 Lib\
 Lib\site-packages
+..\scripts
+..\
+Scripts\
 .
 
 # Uncomment to run site.main() automatically
