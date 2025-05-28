@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a Vulnerability
+  url: https://github.com/esaip-tvassy-bach2026/radXLMAC/security/advisories/new
+  about: Report a vulnerability to the community.
+  - name: Support (link to file)
+  url: https://github.com/esaip-tvassy-bach2026/radXLMAC/blob/main/.github/SUPPORT.md
+  about: Support contact informations.
