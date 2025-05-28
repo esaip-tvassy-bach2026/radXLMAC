@@ -1,7 +1,7 @@
 name: General
 description: Create an issue.
 title: "Replace with your title"
-labels: ["good-first-issues"]
+labels: ["good-first-issue"]
 assignees:
   - esaip-tvassy-bach2026
 body:
