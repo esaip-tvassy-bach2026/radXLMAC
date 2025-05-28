@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: radXLMAC
+message: >-
+  Enhance your MAC address calculations within Microsoft
+  Excel files.
+type: software
+authors:
+  - given-names: Thomas
+    family-names: VASSY--ROUSSEAU
+  - name: TIMCOD
+    address: 7bis Rue Augustin Fresnel
+    city: CARQUEFOU
+    country: FR
+    post-code: '44470'
+    region: Pays de la Loire
+    email: accueil-ouest@timcod.fr
+    tel: '+33228009999'
+    website: 'https://www.timcod.fr/'
+identifiers:
+  - type: url
+    value: 'https://github.com/esaip-tvassy-bach2026'
+    description: Account of the lead developer
+repository-code: 'https://github.com/esaip-tvassy-bach2026/radXLMAC'
+abstract: >-
+  Enhance your MAC address calculations within Microsoft
+  Excel files.
+keywords:
+  - pyinstaller
+  - powershell-scripts
+  - openpyxl
+  - xlsx-files
+  - macaddress
+  - excel-automation
+  - powershell7
+  - python313
+license: AGPL-3.0-only
