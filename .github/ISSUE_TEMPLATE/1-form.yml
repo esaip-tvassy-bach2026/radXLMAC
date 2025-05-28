@@ -1,0 +1,50 @@
+name: General
+description: Create an issue.
+title: "Replace with your title"
+labels: ["good-first-issues"]
+assignees:
+  - esaip-tvassy-bach2026
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this form!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. @octocat or email@example.com
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A fatal error happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/esaip-tvassy-bach2026/radXLMAC/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  - type: checkboxes
+    id: license
+    attributes:
+      label: License
+      description: By submitting this issue, you agree to follow our [License](https://github.com/esaip-tvassy-bach2026/radXLMAC/blob/main/LICENSE.txt) instructions.
+      options:
+        - label: I agree to follow this project's license
+          required: true
